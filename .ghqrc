@@ -1,0 +1,4 @@
+{
+	"root": "~/.ghq",
+	"shallow": true
+}
