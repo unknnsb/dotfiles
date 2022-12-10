@@ -7,11 +7,11 @@
 
 - [Neovim](https://github.com/neovim/neovim) - Editor
 - [packer.nvim](https://github.com/wbthomason/packer.nvim) - Package Manager For Neovim
-- [neosolarized.nvim](https://github.com/svrana/neosolarized.nvim) - Colorscheme
-- [lspconfig](https://github.com/neovim/nvim-lspconfig) - Lsp
+- [tokyonight.nvim](https://github.com/folke/tokyonight.nvim) - Colorscheme
+- [coc.nvim](https://github.com/neoclide/coc.nvim) - Cmp and other stuff.
 - [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) - Syntax highlighting
-- [nvim-cmp](https://github.com/hrsh7th/nvim-cmp) - Completion plugin
 - [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim) - Fuzzy Finder For Neovim
+
 #### and etc.
 
 # Fish Shell Setup
@@ -25,6 +25,7 @@
 - [Peco](https://github.com/peco/peco) - Interactive filtering
 
 # 🔫 Inspired Configs
+
 - [craftzdog/dotfiles-public](https://github.com/craftzdog/dotfiles-public)
 - [2nthony/dotfiles](https://github.com/2nthony/dotfiles)
 - [ChristianChiarulli/nvim](https://github.com/ChristianChiarulli/nvim/)

@@ -1,42 +1,37 @@
 local keymap = vim.keymap.set
-local opts = { noremap = true, silent = true }
+local opts = { silent = true }
 
--- remap space bar as map leader
+--Remap space as leader key
+keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 
-keymap('n', 'x', '"_x', opts)
+-- Better window navigation
+keymap("n", "<C-h>", "<C-w>h", opts)
+keymap("n", "<C-j>", "<C-w>j", opts)
+keymap("n", "<C-k>", "<C-w>k", opts)
+keymap("n", "<C-l>", "<C-w>l", opts)
 
--- Increment/decrement
-keymap('n', '+', '<C-a>', opts)
-keymap('n', '-', '<C-x>', opts)
+-- Resize with arrows
+keymap("n", "<C-Up>", ":resize -2<CR>", opts)
+keymap("n", "<C-Down>", ":resize +2<CR>", opts)
+keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
+keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
--- Delete a word backwards
-keymap('n', 'dw', 'vb"_d', opts)
+-- Tabs
+keymap("n", "<leader>te", ":tabedit ")
 
--- Select all
-keymap('n', '<C-a>', 'gg<S-v>G', opts)
+-- Clear highlights
+keymap("n", "<leader>h", "<cmd>nohlsearch<CR>", opts)
 
--- Save with root permission (not working for now)
---vim.api.nvim_create_user_command('W', 'w !sudo tee > /dev/null %', {})
+-- Close buffers
+keymap("n", "<leader>q", "<cmd>bdelete<CR>", opts)
 
--- New tab
-keymap('n', 'te', ':tabedit <Return>', opts)
--- Split window
-keymap('n', 'ss', ':split<Return><C-w>w', opts)
-keymap('n', 'sv', ':vsplit<Return><C-w>w', opts)
--- Move window
-keymap('n', 'sw', '<C-w>w', opts)
-keymap('', 'sh', '<C-w>h', opts)
-keymap('', 'sk', '<C-w>k', opts)
-keymap('', 'sj', '<C-w>j', opts)
-keymap('', 'sl', '<C-w>l', opts)
+-- Better paste
+keymap("v", "p", '"_dP', opts)
 
--- Resize window
-keymap('n', '<C-w><left>', '<C-w><', opts)
-keymap('n', '<C-w><right>', '<C-w>>', opts)
-keymap('n', '<C-w><up>', '<C-w>+', opts)
-keymap('n', '<C-w><down>', '<C-w>-', opts)
+-- Press jk fast to enter
+keymap("i", "jk", "<ESC>", opts)
 
--- custom maps
-keymap('n', '<leader>h', ':nohl<Return>', opts)
-keymap('n', '<leader>q', ':bdelete<Return>', opts)
+-- Stay in indent mode
+keymap("v", "<", "<gv", opts)
+keymap("v", ">", ">gv", opts)

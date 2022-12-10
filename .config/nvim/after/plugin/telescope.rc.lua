@@ -39,10 +39,9 @@ telescope.setup {
     },
   },
 }
-
 telescope.load_extension("file_browser")
-telescope.load_extension('harpoon')
 
+-- keymaps
 vim.keymap.set('n', ';f',
   function()
     builtin.find_files({
@@ -77,4 +76,3 @@ vim.keymap.set("n", "sf", function()
     layout_config = { height = 40 }
   })
 end)
-vim.keymap.set('n', ';hp', ':Telescope harpoon marks<Return>')
