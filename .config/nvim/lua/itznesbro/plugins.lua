@@ -40,6 +40,7 @@ return packer.startup(function(use)
   use { "kyazdani42/nvim-web-devicons" }
   use { "nvim-lualine/lualine.nvim" }
   use { "akinsho/nvim-bufferline.lua" }
+  use { "tpope/vim-commentary" }
 
   -- colorschemes
   use { "folke/tokyonight.nvim" }

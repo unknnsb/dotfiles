@@ -35,3 +35,7 @@ keymap("i", "jk", "<ESC>", opts)
 -- Stay in indent mode
 keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
+
+-- Comment
+keymap("n", "<leader>/", ":Commentary<Return>", opts)
+keymap("v", "<leader>/", ":Commentary<Return>", opts)
