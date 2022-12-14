@@ -67,3 +67,7 @@ set -x N_PREFIX "$HOME/n"; contains "$N_PREFIX/bin" $PATH; or set -a PATH "$N_PR
 set -gx PNPM_HOME "/home/itznesbro/.local/share/pnpm"
 set -gx PATH "$PNPM_HOME" $PATH
 # pnpm end
+
+# Deno
+set -gx DENO_INSTALL "/home/itznesbro/.deno/bin"
+set -gx PATH "$DENO_INSTALL" $PATH
