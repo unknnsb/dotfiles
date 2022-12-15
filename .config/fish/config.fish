@@ -33,6 +33,9 @@ set -gx PATH ~/.local/share/nvm/*/bin $PATH
 # NodeJS
 set -gx PATH node_modules/.bin $PATH
 
+# Cargo
+set -gx PATH ~/.cargo/bin $PATH
+
 # Go
 set -g GOPATH $HOME/go
 set -gx PATH $GOPATH/bin $PATH
@@ -71,3 +74,6 @@ set -gx PATH "$PNPM_HOME" $PATH
 # Deno
 set -gx DENO_INSTALL "/home/itznesbro/.deno/bin"
 set -gx PATH "$DENO_INSTALL" $PATH
+
+# Mason.nvim
+set -gx PATH "/home/itznesbro/.local/share/nvim/mason/bin" $PATH
