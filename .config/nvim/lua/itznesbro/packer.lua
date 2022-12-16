@@ -17,6 +17,7 @@ return require('packer').startup(function(use)
 
   use('nvim-lua/plenary.nvim')
   use('kyazdani42/nvim-web-devicons')
+  use('akinsho/nvim-bufferline.lua')
 
   use {
   	'nvim-telescope/telescope.nvim',
