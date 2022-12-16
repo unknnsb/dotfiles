@@ -29,6 +29,7 @@ return require('packer').startup(function(use)
 	  'rose-pine/neovim',
 	  as = 'rose-pine'
   })
+  use 'folke/tokyonight.nvim'
 
   use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
   use('windwp/nvim-ts-autotag')

@@ -1,3 +1,5 @@
+vim.opt.guicursor = ""
+
 vim.scriptencoding = 'utf-8'
 vim.opt.encoding = 'utf-8'
 vim.opt.fileencoding = 'utf-8'
@@ -8,7 +10,10 @@ vim.wo.relativenumber = true
 vim.opt.title = true
 vim.opt.autoindent = true
 vim.opt.smartindent = true
-vim.opt.hlsearch = true
+
+vim.opt.hlsearch = false
+vim.opt.incsearch = true
+
 vim.opt.backup = false
 vim.opt.showcmd = true
 vim.opt.cmdheight = 1
@@ -27,6 +32,20 @@ vim.opt.wrap = false -- No Wrap lines
 vim.opt.backspace = { 'start', 'eol', 'indent' }
 vim.opt.path:append { '**' } -- Finding files - Search down into subfolders
 vim.opt.wildignore:append { '*/node_modules/*' }
+
+vim.opt.termguicolors = true
+vim.opt.winblend = 0
+vim.opt.wildoptions = 'pum'
+vim.opt.pumblend = 5
+vim.opt.background = 'dark'
+
+-- highlight yanked text for 200ms using the "Visual" highlight group
+vim.cmd [[
+  augroup highlight_yank
+  autocmd!
+  au TextYankPost * silent! lua vim.highlight.on_yank({higroup="Visual", timeout=100})
+  augroup END
+]]
 
 -- Undercurl
 vim.cmd([[let &t_Cs = "\e[4:3m"]])
