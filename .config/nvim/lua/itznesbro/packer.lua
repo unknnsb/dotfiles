@@ -16,6 +16,7 @@ return require('packer').startup(function(use)
   use('wbthomason/packer.nvim')
 
   use('nvim-lua/plenary.nvim')
+  use('kyazdani42/nvim-web-devicons')
 
   use {
   	'nvim-telescope/telescope.nvim',
@@ -31,6 +32,7 @@ return require('packer').startup(function(use)
   use('nvim-treesitter/playground')
   use('theprimeagen/harpoon')
   use('tpope/vim-fugitive')
+  use('nvim-lualine/lualine.nvim')
 
   use {
 	  'VonHeikemen/lsp-zero.nvim',
@@ -54,10 +56,10 @@ return require('packer').startup(function(use)
 	  }
   }
 
-  use({
-    'terror/chatgpt.nvim',
-    run = 'pip3 install -r requirements.txt'
-  })
+  --use({
+  --  'terror/chatgpt.nvim',
+  --  run = 'pip3 install -r requirements.txt'
+  --})
 
   if packer_bootstrap then
     require('packer').sync()
