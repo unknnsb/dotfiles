@@ -77,3 +77,5 @@ set -gx PATH "$DENO_INSTALL" $PATH
 
 # Mason.nvim
 set -gx PATH "/home/itznesbro/.local/share/nvim/mason/bin" $PATH
+
+export OPENAI_API_KEY=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

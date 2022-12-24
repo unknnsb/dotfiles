@@ -14,7 +14,7 @@
   ui = auto
 [alias]
   a = "!git status --short | fzf | awk '{print $2}' | xargs git add"
-  d = "!git diff | cat"
+  d = diff
   co = checkout
   ci = commit
   ca = commit -a
