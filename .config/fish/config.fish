@@ -2,9 +2,6 @@ set fish_greeting ""
 
 set -gx TERM xterm-256color
 
-# vim like key bindings
-# fish_vi_key_bindings
-
 # theme
 set -g theme_color_scheme terminal-dark
 set -g fish_prompt_pwd_dir_length 1
