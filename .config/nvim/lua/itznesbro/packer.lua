@@ -19,27 +19,34 @@ return require('packer').startup(function(use)
   use('kyazdani42/nvim-web-devicons')
   use('akinsho/nvim-bufferline.lua')
 
+  -- Telescope
   use {
   	'nvim-telescope/telescope.nvim',
   	requires = { {'nvim-lua/plenary.nvim'} }
   }
   use('nvim-telescope/telescope-file-browser.nvim')
 
+  -- Colorschemes
   use({
 	  'rose-pine/neovim',
 	  as = 'rose-pine'
   })
   use 'folke/tokyonight.nvim'
+  use 'tjdevries/colorbuddy.vim'
+  use 'svrana/neosolarized.nvim'
 
+  -- Treesitter
   use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
   use('windwp/nvim-ts-autotag')
   use('windwp/nvim-autopairs')
   use('nvim-treesitter/playground')
 
+  -- Others
   use('theprimeagen/harpoon')
   use('tpope/vim-fugitive')
   use('nvim-lualine/lualine.nvim')
 
+  -- Lsp & Cmp
   use {
 	  'VonHeikemen/lsp-zero.nvim',
 	  requires = {
