@@ -6,9 +6,10 @@
 # Editor Setup
 
 - [Neovim](https://github.com/neovim/neovim) - Editor
-- [packer.nvim](https://github.com/wbthomason/packer.nvim) - Package Manager For Neovim
-- [tokyonight.nvim](https://github.com/folke/tokyonight.nvim) - Colorscheme
-- [coc.nvim](https://github.com/neoclide/coc.nvim) - Cmp and other stuff.
+- [lazy.nvim](https://github.com/folke/lazy.nvim) - Package Manager For Neovim
+- [neosolarized.nvim](https://github.com/svrana/neosolarized.nvim) - Colorscheme
+- [nvim-cmp](https://github.com/hrsh7th/nvim-cmp) - Cmp
+- [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig) - Lsp Config
 - [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) - Syntax highlighting
 - [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim) - Fuzzy Finder For Neovim
 
