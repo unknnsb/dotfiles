@@ -73,7 +73,7 @@ function M.config()
     vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
   end)
 
-  lsp.setup_servers({'sumneko_lua', 'clangd', force = true})
+  lsp.setup_servers({'lua_ls', 'clangd', force = true})
 
   lsp.setup()
 end
