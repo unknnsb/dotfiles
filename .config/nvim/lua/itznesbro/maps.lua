@@ -46,3 +46,5 @@ vim.keymap.set("n", "sf", function()
     layout_config = { height = 40 }
   })
 end)
+vim.keymap.set("n", "WQ", ":wq<Return>")
+vim.keymap.set("n", "QQ", ":q<Return>")
