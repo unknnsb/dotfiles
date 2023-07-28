@@ -14,10 +14,19 @@ return require('packer').startup(function(use)
   use({
     'olivercederborg/poimandres.nvim',
 	  as = 'poimandres',
-	  config = function()
-		  vim.cmd('colorscheme poimandres')
-	  end
+	  -- config = function()
+		 --  vim.cmd('colorscheme poimandres')
+	  -- end
   })
+  use {
+    "2nthony/vitesse.nvim",
+    requires = {
+      "tjdevries/colorbuddy.nvim"
+    },
+    config = function()
+      vim.cmd('colorscheme vitesse')
+    end
+  }
 
   use({
       "folke/trouble.nvim",

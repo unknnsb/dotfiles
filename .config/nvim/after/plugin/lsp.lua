@@ -172,3 +172,8 @@ nvim_lsp.astro.setup {
   on_attach = lsp.on_attach,
   capabilities = capabilities
 }
+
+nvim_lsp.pyright.setup {
+  on_attach = lsp.on_attach,
+  capabilities = capabilities
+}
