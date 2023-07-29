@@ -4,6 +4,8 @@ return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
+  use("stevearc/oil.nvim")
+
   use("nvim-lualine/lualine.nvim")
 
   use {
