@@ -36,10 +36,14 @@ return require('packer').startup(function(use)
     requires = {
       "tjdevries/colorbuddy.nvim"
     },
-    config = function()
-      vim.cmd('colorscheme vitesse')
-    end
+    -- config = function()
+    --   vim.cmd('colorscheme vitesse')
+    -- end
   }
+    use {
+    'svrana/neosolarized.nvim'
+  }
+    use { 'tjdevries/colorbuddy.nvim' }
 
   use({
       "folke/trouble.nvim",
