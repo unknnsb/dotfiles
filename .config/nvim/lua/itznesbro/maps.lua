@@ -49,3 +49,5 @@ vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
 end)
 
+vim.keymap.set("n", "<leader>ef", "<cmd>TSToolsFixAll<CR>")
+vim.keymap.set("n", "<leader>mi", "<cmd>TSToolsAddMissingImports<CR>")

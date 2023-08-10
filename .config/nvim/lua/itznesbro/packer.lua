@@ -45,6 +45,11 @@ return require('packer').startup(function(use)
   }
     use { 'tjdevries/colorbuddy.nvim' }
 
+  use {
+    "pmizio/typescript-tools.nvim",
+    requires = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" }
+  }
+
   use({
       "folke/trouble.nvim",
       config = function()
