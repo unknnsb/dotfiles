@@ -20,6 +20,9 @@ alias tmp "cd /tmp"
 alias cl clear
 alias cat bat
 
+# Keymaps
+bind \cf "tmux-sessionizer"
+
 set -gx EDITOR nvim
 
 set -gx PATH bin $PATH
@@ -72,45 +75,3 @@ set -gx PATH "$PNPM_HOME" $PATH
 
 # Mason.nvim
 set -gx PATH "$HOME/.local/share/nvim/mason/bin" $PATH
-
-# Neovim Config Switcher
-set -x items "nvim\nLazyVim"
-
-function nvims
-    set selected_value (echo -e $items | fzf --select-1)
-    if [ -n "$selected_value" ]
-        set -x NVIM_APPNAME $selected_value
-        nvim
-    end
-end
-
-# Define function to switch git branches using fzf
-function gco
-    # Get the list of all git branches and pass them to fzf
-    set branch (git branch -a | sed 's/^[* \t]*//' | fzf)
-
-    # Check if a branch was selected
-    if test -n "$branch"
-        # Switch to the selected branch using git checkout
-        git checkout $branch
-    end
-end
-
-abbr -a gco gco
-
-function ghqcd
-    # Get the list of directories and pass them to fzf
-    set -l ghq_dir ~/.ghq/github.com/ItzNesbroDev/
-    set -l target (find $ghq_dir -type d -maxdepth 1 -mindepth 1 -exec basename {} \; | fzf)
-
-    # Check if a directory was selected
-    if test -n "$target"
-        # Change to the selected directory
-        cd "$ghq_dir$target"
-    end
-end
-
-# Create an abbreviation for the function
-abbr -a fcd ghqcd
-
-export OPENAI_API_KEY=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
