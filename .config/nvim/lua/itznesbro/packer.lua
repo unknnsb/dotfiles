@@ -15,6 +15,7 @@ local packer_bootstrap = ensure_packer()
 return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
+  use 'nvim-tree/nvim-web-devicons'
 
   use {
 	  'nvim-telescope/telescope.nvim', tag = '0.1.0',
@@ -82,6 +83,11 @@ return require('packer').startup(function(use)
   use("github/copilot.vim")
   use("eandrju/cellular-automaton.nvim")
   use("laytan/cloak.nvim")
+
+  use {
+    'stevearc/oil.nvim',
+    config = function() require('oil').setup() end
+  }
 
 if packer_bootstrap then
     require('packer').sync()
