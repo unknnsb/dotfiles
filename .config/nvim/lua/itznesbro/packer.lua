@@ -89,6 +89,14 @@ return require('packer').startup(function(use)
     config = function() require('oil').setup() end
   }
 
+  use {"windwp/nvim-ts-autotag", config = function()
+    require('nvim-ts-autotag').setup()
+  end}
+  use {
+    "windwp/nvim-autopairs",
+    config = function() require("nvim-autopairs").setup {} end
+  }
+
 if packer_bootstrap then
     require('packer').sync()
   end
