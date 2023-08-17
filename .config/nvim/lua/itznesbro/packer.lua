@@ -11,50 +11,30 @@ end
 
 local packer_bootstrap = ensure_packer()
 
+
 return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
-  use("stevearc/oil.nvim")
-
-  use("nvim-lualine/lualine.nvim")
-
   use {
-	  'nvim-telescope/telescope.nvim',
+	  'nvim-telescope/telescope.nvim', tag = '0.1.0',
+	  -- or                            , branch = '0.1.x',
 	  requires = { {'nvim-lua/plenary.nvim'} }
   }
 
   use({
-    'olivercederborg/poimandres.nvim',
-	  as = 'poimandres',
-	  -- config = function()
-		 --  vim.cmd('colorscheme poimandres')
-	  -- end
+	  'rose-pine/neovim',
+	  as = 'rose-pine',
+	  config = function()
+		  vim.cmd('colorscheme rose-pine')
+	  end
   })
-  use {
-    "2nthony/vitesse.nvim",
-    requires = {
-      "tjdevries/colorbuddy.nvim"
-    },
-    -- config = function()
-    --   vim.cmd('colorscheme vitesse')
-    -- end
-  }
-    use {
-    'svrana/neosolarized.nvim'
-  }
-    use { 'tjdevries/colorbuddy.nvim' }
-
-  use {
-    "pmizio/typescript-tools.nvim",
-    requires = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" }
-  }
 
   use({
       "folke/trouble.nvim",
       config = function()
           require("trouble").setup {
-              icons = true,
+              icons = false,
               -- your configuration comes here
               -- or leave it empty to use the default settings
               -- refer to the configuration section below
@@ -74,18 +54,6 @@ return require('packer').startup(function(use)
   use("mbbill/undotree")
   use("tpope/vim-fugitive")
   use("nvim-treesitter/nvim-treesitter-context");
-  use("kyazdani42/nvim-web-devicons")
-  use('windwp/nvim-autopairs')
-  use('windwp/nvim-ts-autotag')
-  use { 'numToStr/Comment.nvim',
-    requires = {
-      'JoosepAlviste/nvim-ts-context-commentstring'
-    }
-  }
-  use('norcalli/nvim-colorizer.lua')
-  use('folke/zen-mode.nvim')
-  use('akinsho/nvim-bufferline.lua')
-  use('lewis6991/gitsigns.nvim')
 
   use {
 	  'VonHeikemen/lsp-zero.nvim',
@@ -95,9 +63,6 @@ return require('packer').startup(function(use)
 		  {'neovim/nvim-lspconfig'},
 		  {'williamboman/mason.nvim'},
 		  {'williamboman/mason-lspconfig.nvim'},
-      {'onsails/lspkind-nvim'},
-      {'jose-elias-alvarez/null-ls.nvim'},
-      {'glepnir/lspsaga.nvim'},
 
 		  -- Autocompletion
 		  {'hrsh7th/nvim-cmp'},
@@ -113,7 +78,12 @@ return require('packer').startup(function(use)
 	  }
   }
 
-  if packer_bootstrap then
+  use("folke/zen-mode.nvim")
+  use("github/copilot.vim")
+  use("eandrju/cellular-automaton.nvim")
+  use("laytan/cloak.nvim")
+
+if packer_bootstrap then
     require('packer').sync()
   end
 end)

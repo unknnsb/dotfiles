@@ -1,8 +1,8 @@
-require("itznesbro.options")
-require("itznesbro.maps")
+require("itznesbro.set")
+require("itznesbro.remap")
 
 local augroup = vim.api.nvim_create_augroup
-local ItzNesbroGroup = augroup('ItzNesbro', {})
+local TheItzNesbroGroup = augroup('ItzNesbro', {})
 
 local autocmd = vim.api.nvim_create_autocmd
 local yank_group = augroup('HighlightYank', {})
@@ -23,7 +23,7 @@ autocmd('TextYankPost', {
 })
 
 autocmd({"BufWritePre"}, {
-    group = ItzNesbroGroup,
+    group = TheItzNesbroGroup,
     pattern = "*",
     command = [[%s/\s\+$//e]],
 })
