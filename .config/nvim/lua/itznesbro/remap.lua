@@ -39,3 +39,17 @@ vim.keymap.set("n", "<leader><leader>", function()
 end)
 
 vim.keymap.set("n", "-", require("oil").open, { desc = "Open parent directory" })
+
+-- Move between windows
+vim.api.nvim_set_keymap('', '<C-h>', '<C-w>h', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('', '<C-j>', '<C-w>j', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('', '<C-k>', '<C-w>k', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('', '<C-l>', '<C-w>l', { noremap = true, silent = true })
+
+-- Save and quit
+vim.api.nvim_set_keymap('', '<C-s>', ':w<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('', '<C-q>', ':q<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('', '<C-x>', ':wq<CR>', { noremap = true, silent = true })
+
+-- Search and replace
+vim.api.nvim_set_keymap('', '<C-r>', ':%s//g<Left><Left>', { noremap = true, silent = true })

@@ -55,6 +55,7 @@ return require('packer').startup(function(use)
   use("mbbill/undotree")
   use("tpope/vim-fugitive")
   use("nvim-treesitter/nvim-treesitter-context");
+  use("nvim-lualine/lualine.nvim")
 
   use {
 	  'VonHeikemen/lsp-zero.nvim',
@@ -96,6 +97,18 @@ return require('packer').startup(function(use)
     "windwp/nvim-autopairs",
     config = function() require("nvim-autopairs").setup {} end
   }
+
+--use {
+--  'Exafunction/codeium.vim',
+--  config = function ()
+--    vim.keymap.set('i', '<C-g>', function () return vim.fn['codeium#Accept']() end, { expr = true })
+--    vim.keymap.set('i', '<c-;>', function() return vim.fn['codeium#CycleCompletions'](1) end, { expr = true })
+--    vim.keymap.set('i', '<c-,>', function() return vim.fn['codeium#CycleCompletions'](-1) end, { expr = true })
+--    vim.keymap.set('i', '<c-x>', function() return vim.fn['codeium#Clear']() end, { expr = true })
+--  end
+--}
+
+  use{'numToStr/Comment.nvim', config = function() require("Comment").setup{} end}
 
 if packer_bootstrap then
     require('packer').sync()
