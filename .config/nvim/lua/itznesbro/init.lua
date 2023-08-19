@@ -1,5 +1,6 @@
 require("itznesbro.set")
 require("itznesbro.remap")
+require("itznesbro.packer")
 
 local augroup = vim.api.nvim_create_augroup
 local TheItzNesbroGroup = augroup('ItzNesbro', {})
