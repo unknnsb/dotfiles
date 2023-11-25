@@ -18,6 +18,7 @@ alias lla "ll -A"
 alias g git
 alias tmp "cd /tmp"
 alias cl clear
+alias config 'git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias cat bat
 
 # Keymaps
