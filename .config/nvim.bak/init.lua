@@ -1,4 +1,4 @@
-require("itznesbro.options")
-require("itznesbro.lazy")
-require("itznesbro.maps")
-require'impatient'.enable_profile()
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
+require("itznesbro")
