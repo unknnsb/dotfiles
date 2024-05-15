@@ -20,6 +20,7 @@ alias tmp "cd /tmp"
 alias cl clear
 alias config 'git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias cat bat
+alias gcz 'git-cz' # npm i -g minimal-git-cz
 
 # Keymaps
 bind \cf "tmux-sessionizer"
@@ -41,6 +42,9 @@ set -gx PATH $HOME/.cargo/bin $PATH
 # Go
 set -g GOPATH $HOME/go
 set -gx PATH $GOPATH/bin $PATH
+
+# Yarn
+set -gx PATH $HOME/.yarn/bin $PATH
 
 # NVM
 function __check_rvm --on-variable PWD --description 'Do nvm stuff'
