@@ -33,6 +33,7 @@ vim.opt.splitright = true -- Put new windows right of current
 vim.opt.splitkeep = "cursor"
 vim.opt.mouse = ""
 vim.opt.cmdheight = 0
+vim.opt.guicursor = ""
 
 vim.cmd([[au BufNewFile,BufRead *.astro setf astro]])
 
