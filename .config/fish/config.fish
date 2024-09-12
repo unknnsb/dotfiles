@@ -80,3 +80,12 @@ set -gx PATH "$PNPM_HOME" $PATH
 
 # Mason.nvim
 set -gx PATH "$HOME/.local/share/nvim/mason/bin" $PATH
+
+function y
+	set tmp (mktemp -t "yazi-cwd.XXXXXX")
+	yazi $argv --cwd-file="$tmp"
+	if set cwd (command cat -- "$tmp"); and [ -n "$cwd" ]; and [ "$cwd" != "$PWD" ]
+		builtin cd -- "$cwd"
+	end
+	rm -f -- "$tmp"
+end
