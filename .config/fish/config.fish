@@ -19,7 +19,7 @@ alias g git
 alias tmp "cd /tmp"
 alias cl clear
 alias config 'git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-alias cat bat
+alias cat batcat
 alias gcz 'git-cz' # npm i -g minimal-git-cz
 
 # Keymaps
@@ -89,3 +89,5 @@ function y
 	end
 	rm -f -- "$tmp"
 end
+
+set -gx DOTNET_GCHeapHardLimit 1C0000000
