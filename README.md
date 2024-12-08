@@ -1,33 +1,80 @@
 <h1 align="center">🚀 Dotfiles</h1>
-<p align="center">My Minimal Dotfiles</p>
+<p align="center">My Minimal Dotfiles for a Productive Workflow</p>
 
 ---
 
-# Editor Setup
+### 📚 **Editor Setup**
 
-- [Neovim](https://github.com/neovim/neovim) - Editor
-- [lazy.nvim](https://github.com/folke/lazy.nvim) - Package Manager For Neovim
-- [neosolarized.nvim](https://github.com/svrana/neosolarized.nvim) - Colorscheme
-- [nvim-cmp](https://github.com/hrsh7th/nvim-cmp) - Cmp
-- [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig) - Lsp Config
-- [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) - Syntax highlighting
-- [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim) - Fuzzy Finder For Neovim
+- [Neovim](https://github.com/neovim/neovim) – A highly extensible text editor
 
-#### and etc.
+---
 
-# Fish Shell Setup
+### 🐚 **Fish Shell Setup**
 
-- [Fish Shell](https://fishshell.com/)
-- [Fisher](https://github.com/jorgebucaran/fisher) - Plugin Manager
-- [bobthefish](https://github.com/oh-my-fish/theme-bobthefish) - Fish Theme. Install with fisher `fisher install oh-my-fish/theme-bobthefish`
-- [Z](https://github.com/jethrokuan/z) - Directory Jumper
-- [Exa](https://the.exa.website/) - ls replacment with colors and icons
-- [Ghq](https://github.com/2nthony/ghq) - Local Git repository organizer
-- [Peco](https://github.com/peco/peco) - Interactive filtering
+- [Fish Shell](https://fishshell.com/) – A smart and user-friendly shell
+- [Fisher](https://github.com/jorgebucaran/fisher) – Plugin manager for Fish
+- [bobthefish](https://github.com/oh-my-fish/theme-bobthefish) – Fish theme for a sleek terminal look.
+  Install with: `fisher install oh-my-fish/theme-bobthefish`
+- [Z](https://github.com/jethrokuan/z) – Directory jumper for faster navigation
+- [Eza](https://github.com/eza-community/eza) – Colorful `ls` replacement with icons
+- [Ghq](https://github.com/2nthony/ghq) – Local Git repository organizer
+- [Peco](https://github.com/peco/peco) – Interactive filtering tool
 
-# 🔫 Inspired Configs
+---
 
-- [craftzdog/dotfiles-public](https://github.com/craftzdog/dotfiles-public)
-- [2nthony/dotfiles](https://github.com/2nthony/dotfiles)
-- [ChristianChiarulli/nvim](https://github.com/ChristianChiarulli/nvim/)
-- [theprimeagen/.dotfiles](https://github.com/ThePrimeagen/.dotfiles/)
+### 🔥 **Inspired Configs**
+
+These are the dotfiles repositories that inspired this setup:
+
+- [craftzdog/dotfiles-public](https://github.com/craftzdog/dotfiles-public) – A personal dotfiles setup
+- [2nthony/dotfiles](https://github.com/2nthony/dotfiles) – Minimalist approach to dotfiles
+- [ChristianChiarulli/nvim](https://github.com/ChristianChiarulli/nvim/) – Neovim configuration by Christian Chiarulli
+- [theprimeagen/.dotfiles](https://github.com/ThePrimeagen/.dotfiles/) – Primeagen's powerful dotfiles setup
+
+---
+
+### 🚀 **Installation Instructions**
+
+1. **Clone the dotfiles repository**:
+
+    ```bash
+    git clone --bare https://github.com/ItzNesbro/dotfiles $HOME/.dotfiles
+    ```
+
+2. **Install required dependencies**:
+
+    Install the necessary software like **Fish** and **Neovim**:
+
+    ```bash
+    sudo apt install fish neovim
+    ```
+
+3. **Configure the dotfiles repository**:
+
+    Create an alias to make it easier to work with the dotfiles:
+
+    ```bash
+    alias config='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+    ```
+
+4. **Remove existing conflicting files** (optional but recommended):
+
+    If the files already exist on your new device, you may want to remove them to avoid conflicts. Use the following command to ensure that your dotfiles are in sync:
+
+    ```bash
+    config checkout
+    ```
+
+5. **Hide untracked files**:
+
+    This step ensures that untracked files won't show up in the status, keeping your workspace clean:
+
+    ```bash
+    config config --local status.showUntrackedFiles no
+    ```
+
+---
+
+### 💬 **Connect with Me**
+
+If you have any questions or want to discuss improvements, feel free to reach out to me on [GitHub](https://github.com/ItzNesbro) or [Instagram](https://instagram.com/_nesbeer).
