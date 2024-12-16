@@ -37,3 +37,5 @@ keymap.set("n", "<C-w><down>", "<C-w>-")
 keymap.set("n", "<leader>f", ":lua vim.lsp.buf.format()<CR>", opts)
 
 keymap.set("n", "<Esc>", ":noh<CR>", opts)
+
+keymap.set('n', "<leader>g", ":Glow<CR>", opts)
